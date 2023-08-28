@@ -95,7 +95,7 @@ You can also customize chatbot with different configuration
           "https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg",
       },
       chatWindow: {
-        welcomeMessage: "Hello! This is custom welcome message",
+                welcomeMessage: "Hello, I'm Anima, your detective and butler assistant. You can ask me any questions about the tools in this directory, and I will try to find the right answers for you. You can share a website URL with me, and I'll provide insights about tools that could be useful for your project. Please feel free to ask me any kind of question.",
         backgroundColor: "#ffffff",
         height: 700,
         width: 400,
@@ -106,7 +106,7 @@ You can also customize chatbot with different configuration
           textColor: "#303235",
           showAvatar: true,
           avatarSrc:
-            "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png",
+            "https://i.imgur.com/x9x2LhB.png",
         },
         userMessage: {
           backgroundColor: "#3B81F6",
