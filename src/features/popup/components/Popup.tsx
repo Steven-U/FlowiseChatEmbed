@@ -110,9 +110,8 @@ export const Popup = (props: PopupProps) => {
               //on:pointerdown={stopPropagation}
             >
                 <input
-    // ... autres propriétés de l'input
-    on:click={(event) => event.stopPropagation()} // Gestion de l'interaction avec le champ de texte
-  />
+                on:click={(event) => event.stopPropagation()} // Gestion de l'interaction avec le champ de texte
+                />
 
               {props.value && <div style={{ background: 'white', margin: 'auto', padding: '7px' }}>
                 <pre ref={preEl} />

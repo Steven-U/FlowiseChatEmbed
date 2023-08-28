@@ -35,10 +35,24 @@ export const TextInput = (props: Props) => {
         if (e.key === 'Enter' && !isIMEComposition) submit()
     }
 
-    onMount(() => {
-        if (!isMobile() && inputRef) inputRef.focus()
-    })
+    // Supprimer le focus automatique
+    // onMount(() => {
+    //     if (!isMobile() && inputRef) inputRef.focus()
+    // })
 
+        // Gestion du clic à l'extérieur
+        const handleDocumentClick = (e: MouseEvent) => {
+            if (inputRef && !inputRef.contains(e.target as Node)) {
+                inputRef.blur(); // Perdre le focus lorsque l'utilisateur clique à l'extérieur
+            }
+        };
+
+    // Attacher/détacher l'événement de clic à l'extérieur
+    onMount(() => {
+        document.addEventListener('click', handleDocumentClick);
+    });
+
+    
     return (
         <div
             class={'flex items-end justify-between chatbot-input'}
